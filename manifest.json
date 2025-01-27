@@ -36,7 +36,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-    "id": "cyberbro-analyzer@example.com",
+    "id": "cyberbro-analyzer@cyberbro.net",
     "strict_min_version": "91.0"
     }
   }
