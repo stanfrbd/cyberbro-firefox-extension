@@ -4,6 +4,10 @@ This is the Cyberbro Firefox Extension. You can find the project on [GitHub](htt
 
 In order to use this extension, you must have a Cyberbro instance running (e.g. http://127.0.0.1:5000).
 
+<p>
+<a href="https://addons.mozilla.org/addon/cyberbro-analyzer/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get Cyberbro Analyzer for Firefox"></a>
+</p>
+
 > [!IMPORTANT]
 > The Cyberbro URL you are using must be in HTTPS with a valid certificate (or trusted certificate). \
 > Only localhost URLs are allowed in HTTP with Firefox.
