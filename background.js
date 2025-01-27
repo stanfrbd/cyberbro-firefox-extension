@@ -16,7 +16,7 @@ browser.contextMenus.onClicked.addListener(async (info) => {
 
         // Retrieve settings (Cyberbro URL, API prefix, and selected engines)
         browser.storage.sync.get(["cyberbroUrl", "apiPrefix", "selectedEngines"], async (data) => {
-            const cyberbroUrl = data.cyberbroUrl || "https://127.0.0.1:5000";
+            const cyberbroUrl = data.cyberbroUrl || "http://127.0.0.1:5000";
             const apiPrefix = data.apiPrefix || "/api";
             const engines = data.selectedEngines || [];
             console.log("Cyberbro URL:", cyberbroUrl);
@@ -36,7 +36,9 @@ browser.contextMenus.onClicked.addListener(async (info) => {
                     headers: { 
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ text: selectedText, engines: engines })
+                    body: JSON.stringify({ text: selectedText, engines: engines }),
+                    mode: 'cors',
+                    credentials: 'include'
                 });
 
                 // log the response
@@ -95,7 +97,9 @@ browser.contextMenus.onClicked.addListener(async (info) => {
                 const checkStatus = async () => {
                     console.log("Checking analysis status for ID:", analysis_id);
                     const statusResponse = await fetch(`${cyberbroUrl}${apiPrefix}/is_analysis_complete/${analysis_id}`, {
-                        method: "GET"
+                        method: "GET",
+                        mode: 'cors',
+                        credentials: 'include'
                     });
                     const statusText = await statusResponse.text();
                     let statusJson;
