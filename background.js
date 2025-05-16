@@ -33,7 +33,7 @@ browser.contextMenus.onClicked.addListener(async (info) => {
                 console.log("Sending selected text for analysis");
                 const response = await fetch(`${cyberbroUrl}${apiPrefix}/analyze`, {
                     method: "POST",
-                    headers: { 
+                    headers: {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({ text: selectedText, engines: engines }),

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     function selectAllEngines() {
         document.querySelectorAll('#engine-options input[type="checkbox"]').forEach(checkbox => checkbox.checked = true);
